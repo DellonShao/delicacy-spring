@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context">
+    <bean id="swallow" class="delicacy.spring.Swallow">
+        <property name="name" value="Swallow"></property>
+        <property name="age" value="1"></property>
+        <property name="swallowWing" ref="swallow_swing"></property>
+    </bean>
+
+    <bean id="swallow_swing" class="delicacy.spring.SwallowWing"></bean>
+
+    <bean id="logger" class="delicacy.spring.Logger"></bean>
+</beans>
